@@ -81,6 +81,7 @@ void die(const char *, ...);
 void redraw(void);
 void draw(void);
 
+void fullscreen(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
@@ -121,6 +122,7 @@ extern int allowaltscreen;
 extern int allowwindowops;
 extern char *termname;
 extern unsigned int tabspaces;
+extern float alpha;
 extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern unsigned int defaultcs;
