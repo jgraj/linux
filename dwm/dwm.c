@@ -28,7 +28,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <time.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <X11/cursorfont.h>
@@ -2006,14 +2005,7 @@ void
 updatestatus(void)
 {
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext))) {
-		time_t now = time(NULL);
-		struct tm *tm_struct = localtime(&now);
-		int hours = tm_struct->tm_hour;
-		int minutes = tm_struct->tm_min;
-		int seconds = tm_struct->tm_sec;
-		char text[9];
-		sprintf(text, "%02d:%02d:%02d", hours, minutes, seconds);
-		strcpy(stext, text);
+		strcpy(stext, "dwm");
 	}
 	drawbar(selmon);
 }

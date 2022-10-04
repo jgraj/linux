@@ -13,7 +13,7 @@ X11LIB = /usr/X11R6/lib
 PKG_CONFIG = pkg-config
 
 # includes and libs
-INCS = -I$(X11INC) \
+INCS = -I$(X11INC) -I/usr/include/freetype2 \
        `$(PKG_CONFIG) --cflags fontconfig` \
        `$(PKG_CONFIG) --cflags freetype2`
 LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
